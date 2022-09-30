@@ -3,10 +3,9 @@ function sum(a, b){
 }
 
 exports.div = function(a, b) {
-    if (b === 0){
-        throw new Error('Div by zero.');
-    }
-    return a / b; //or just return this line and expect Infinity
+    if  (b === 0)
+        throw new Error("Div by zero!");
+    return a / b;
 }
 
 exports.containsNumbers = ((text) => {

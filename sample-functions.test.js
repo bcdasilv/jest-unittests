@@ -1,19 +1,21 @@
 const myFunctions = require('./sample-functions.js');
 
-//Setup functions
+// //Runs before each test case
 // beforeEach( () => {
 
 // });
 
-// beforeAll( () => {
-
-// });
-
-// //Teardown functions
+// //Runs after each case
 // afterEach( () => {
 
 // });
 
+// //Runs once before all test cases start
+// beforeAll( () => {
+
+// });
+
+// //Runs once after all test cases end
 // afterAll( () => {
 
 // });
@@ -38,16 +40,17 @@ test('lettters and at least one whitespace', () => {
     const result = myFunctions.containsNumbers('as; dk');
     expect(result).toBeFalsy();
 });
+//See this:
+//https://stackoverflow.com/questions/9307603/is-whitespace-equals-to-integer-0-in-javascript
 
-// test.only('div by zero with infinity', ()=>{
+
+// test('div by zero with infinity', ()=>{
 //     expect(myFunctions.div(23, 0)).toBe(Infinity);
 // });
 
 test('div by zero with Error thrown', ()=>{
     expect(() => myFunctions.div(23, 0)).toThrowError(/Div by zero/);
 });
-
-
 
 
 // test('Testing div by zero', () => {
@@ -59,23 +62,3 @@ test('div by zero with Error thrown', ()=>{
 // });
 
 //https://jestjs.io/docs/setup-teardown
-
-//Runs before each test case
-beforeEach( () => {
-
-});
-
-//Runs after each case
-afterEach( () => {
-
-});
-
-//Runs once before all test cases start
-beforeAll( () => {
-
-});
-
-//Runs once after all test cases end
-afterAll( () => {
-
-});

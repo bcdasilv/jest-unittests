@@ -26,17 +26,17 @@ test('Testing sum -- success', () => {
     expect(result).toBe(target);
 });
 
-test('all letters', () => {
-    const result = myFunctions.containsNumbers('as;ldk');
+test('all letters and special chars', () => {
+    const result = myFunctions.containsNumbers('as;ldk.!@#$[]()+-%^&*');
     expect(result).toBeFalsy();
 });
 
-test('lettters and one number in the middle', () => {
-    const result = myFunctions.containsNumbers('as;l8dk');
+test('lettters and chars and one number in the middle', () => {
+    const result = myFunctions.containsNumbers('as;ldk.!@8#$[]()+-%^&*');
     expect(result).toBeTruthy();
 });
 
-test('lettters and at least one whitespace', () => {
+test('chars and at least one whitespace', () => {
     const result = myFunctions.containsNumbers('as; dk');
     expect(result).toBeFalsy();
 });

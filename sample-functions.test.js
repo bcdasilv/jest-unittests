@@ -49,16 +49,10 @@ test('lettters and at least one whitespace', () => {
 // });
 
 test('div by zero with Error thrown', ()=>{
-    expect(() => myFunctions.div(23, 0)).toThrowError(/Div by zero/);
+    expect(() => myFunctions.div(23, 0)).toThrow("Div by zero!");
 });
 
 
 // test('Testing div by zero', () => {
 //     expect(myFunctions.div(10,0)).toBe(Infinity);
 // });
-
-// test('Testing div by zero', () => {
-//     expect(() => myFunctions.div(10,0)).toThrow(/Div by zero not supported/);
-// });
-
-//https://jestjs.io/docs/setup-teardown
